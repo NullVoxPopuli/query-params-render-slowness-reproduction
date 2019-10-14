@@ -1,6 +1,14 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<button {{on 'click' this.toggleProblem}}>
+  Toggle Problem
+</button>
+<button {{on 'click' this.changeFilter}}>
+  Change Filter
+</button>
 
-{{outlet}}
+<hr>
 
+{{#if this.isRenderingProblem}}
+  <Foo @filter={{this.filter}} {{measure-render}}/>
+{{else}}
+  <Foo {{measure-render}} />
+{{/if}}
