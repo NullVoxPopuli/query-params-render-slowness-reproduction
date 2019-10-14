@@ -10,5 +10,5 @@
 {{#if this.isRenderingProblem}}
   <Foo @filter={{this.filter}} {{measure-render}}/>
 {{else}}
-  <Foo {{measure-render}} />
+<Foo @filter={{-1}} {{measure-render}} />
 {{/if}}
